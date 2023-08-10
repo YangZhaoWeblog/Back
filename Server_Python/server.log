@@ -1,0 +1,552 @@
+[2023-08-06 21:07:59.617] [INFO] [model.py:118] Exception Ocurred: Entity namespace for "t_user_token" has no property "token_connection"
+[2023-08-06 21:08:22.725] [INFO] [model.py:118] Exception Ocurred: Entity namespace for "t_user_token" has no property "token_connection"
+[2023-08-06 21:08:23.218] [INFO] [model.py:118] Exception Ocurred: Entity namespace for "t_user_token" has no property "token_connection"
+[2023-08-06 21:09:44.007] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.token = ?]
+[parameters: ('1457a5ceec844cae875d791e0af5721e',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:10:25.545] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.token = ?]
+[parameters: ('465672c1275845db882505a9b98395dc',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:10:25.546] [INFO] [service.py:16] Error: Token 生成失败, 无法与已有 Token 比对
+[2023-08-06 21:10:27.598] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.token = ?]
+[parameters: ('dad27dd639944b39a6fcea98bacd11b8',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:10:27.599] [INFO] [service.py:16] Error: Token 生成失败, 无法与已有 Token 比对
+[2023-08-06 21:14:28.793] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.token = ?]
+[parameters: ('3533c3275b8e4ac0b934821fc4cd8e1d',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:14:28.793] [INFO] [service.py:16] Error: Token 生成失败, 无法与已有 Token 比对
+[2023-08-06 21:17:36.385] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:17:36.384110', '2023-08-06 21:17:36.384121')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:17:55.746] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:17:55.744800', '2023-08-06 21:17:55.744811')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:18:28.236] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:18:28.234688', '2023-08-06 21:18:28.234698')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:18:41.864] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:18:41.863160', '2023-08-06 21:18:41.863171')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:20:01.016] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:20:01.014887', '2023-08-06 21:20:01.014899')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:20:10.043] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:20:10.041938', '2023-08-06 21:20:10.041950')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:22:28.967] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:22:28.965596', '2023-08-06 21:22:28.965608')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:22:28.977] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.user_id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:22:28.978] [INFO] [service.py:16] Error: Error: 登陆失败
+[2023-08-06 21:24:58.852] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:24:58.851391', '2023-08-06 21:24:58.851402')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:24:58.862] [INFO] [model.py:118] Exception Ocurred: (sqlite3.OperationalError) no such column: t_user_token.token
+[SQL: SELECT t_user_token.id AS t_user_token_id, t_user_token.user_id AS t_user_token_user_id, t_user_token.token AS t_user_token_token, t_user_token.expiration AS t_user_token_expiration 
+FROM t_user_token 
+WHERE t_user_token.user_id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2023-08-06 21:34:15.785] [INFO] [model.py:118] Exception Ocurred: SqlOperator.insert_one_row() takes 3 positional arguments but 4 were given
+[2023-08-06 21:34:15.786] [INFO] [service.py:16] Error: Token 分配失败
+[2023-08-06 21:35:31.706] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:35:31.705460', '2023-08-06 21:35:31.705471')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:35:31.718] [INFO] [model.py:118] Exception Ocurred: SqlOperator.insert_one_row() takes 3 positional arguments but 4 were given
+[2023-08-06 21:39:50.220] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:39:50.219497', '2023-08-06 21:39:50.219508')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:40:21.601] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:40:21.600444', '2023-08-06 21:40:21.600453')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:43:45.625] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:43:45.624308', '2023-08-06 21:43:45.624319')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:48:39.169] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:48:39.167718', '2023-08-06 21:48:39.167728')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:48:39.180] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 21:48:39.185] [INFO] [model.py:118] Exception Ocurred: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: DELETE FROM t_user_token WHERE t_user_token.token = ?]
+[parameters: ([{'id': 1, 'username': 'test', 'password': '1', 'email': '', 'phone': '', 'created_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759855), 'updated_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759864)}],)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+[2023-08-06 21:48:39.185] [INFO] [service.py:16] Error: 退出登陆 失败
+[2023-08-06 21:49:23.864] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:49:23.863208', '2023-08-06 21:49:23.863218')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:49:23.875] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 21:49:23.880] [INFO] [model.py:118] Exception Ocurred: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: DELETE FROM t_user_token WHERE t_user_token.token = ?]
+[parameters: ([{'id': 1, 'username': 'test', 'password': '1', 'email': '', 'phone': '', 'created_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759855), 'updated_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759864)}],)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+[2023-08-06 21:55:05.051] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:55:05.049782', '2023-08-06 21:55:05.049794')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:55:05.062] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 21:55:05.064] [INFO] [model.py:118] Exception Ocurred: 'InstanceState' object has no attribute '_post_inspect'
+[2023-08-06 21:56:48.461] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:56:48.460481', '2023-08-06 21:56:48.460492')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:56:48.472] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 21:56:48.477] [INFO] [model.py:118] Exception Ocurred: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: DELETE FROM t_user_token WHERE t_user_token.token = ?]
+[parameters: ([{'id': 1, 'username': 'test', 'password': '1', 'email': '', 'phone': '', 'created_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759855), 'updated_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759864)}],)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+[2023-08-06 21:56:48.477] [INFO] [service.py:16] Error: 退出登陆 失败
+[2023-08-06 21:57:02.085] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 21:57:02.084035', '2023-08-06 21:57:02.084047')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 21:57:02.096] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 21:57:02.101] [INFO] [model.py:118] Exception Ocurred: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: DELETE FROM t_user_token WHERE t_user_token.token = ?]
+[parameters: ([{'id': 1, 'username': 'test', 'password': '1', 'email': '', 'phone': '', 'created_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759855), 'updated_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759864)}],)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+[2023-08-06 22:04:46.284] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:04:46.282995', '2023-08-06 22:04:46.283004')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:04:46.295] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:04:46.299] [INFO] [model.py:118] Exception Ocurred: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: DELETE FROM t_user_token WHERE t_user_token.token = ?]
+[parameters: ({'id': 1, 'username': 'test', 'password': '1', 'email': '', 'phone': '', 'created_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759855), 'updated_at': datetime.datetime(2023, 8, 6, 21, 34, 15, 759864)},)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+[2023-08-06 22:05:35.267] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:05:35.266420', '2023-08-06 22:05:35.266430')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:05:35.278] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:09:39.654] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:09:39.652798', '2023-08-06 22:09:39.652809')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:09:39.664] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:10:47.687] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:10:47.686570', '2023-08-06 22:10:47.686579')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:10:47.698] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:11:03.378] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:11:03.376747', '2023-08-06 22:11:03.376758')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:11:03.388] [INFO] [service.py:16] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:31:21.817] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:31:21.816465', '2023-08-06 22:31:21.816475')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:31:21.829] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:32:22.259] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:32:22.257737', '2023-08-06 22:32:22.257749')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:35:12.631] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:44:20.590] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:44:20.588726', '2023-08-06 22:44:20.588737')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:44:20.600] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:45:01.871] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:45:01.870163', '2023-08-06 22:45:01.870174')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:45:01.883] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-06 22:45:19.282] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:45:19.281402', '2023-08-06 22:45:19.281413')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:45:58.130] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:45:58.128685', '2023-08-06 22:45:58.128696')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:46:32.113] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:46:32.112039', '2023-08-06 22:46:32.112048')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:47:59.111] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:47:59.109781', '2023-08-06 22:47:59.109792')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:48:35.275] [INFO] [tools.py:22] Error: 登陆失败: 登录名 {username} 或 密码错误
+[2023-08-06 22:49:50.235] [INFO] [model.py:118] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-06 22:49:50.234490', '2023-08-06 22:49:50.234502')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-06 22:49:50.246] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:49:41.858] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:49:41.857984', '2023-08-07 17:49:41.857992')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:49:41.863] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:41:27.041] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:41:27.039597', '2023-08-07 18:41:27.039609')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 18:41:27.052] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:45:08.553] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:45:08.552155', '2023-08-07 18:45:08.552166')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 18:45:08.564] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:45:13.080] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 18:45:13.080] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}]}' message='Post details'
+[2023-08-07 18:45:13.081] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 18:45:13.086] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 18:48:34.164] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:48:34.162993', '2023-08-07 18:48:34.163004')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 18:48:34.174] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:48:40.340] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 18:48:40.340] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1"}]}' message='Post details'
+[2023-08-07 18:48:40.340] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 18:48:40.346] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 18:48:41.116] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 429 222
+[2023-08-07 18:48:41.117] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=091baf6fb63ae00ef19f11d8521b132b response_code=429
+[2023-08-07 18:48:41.117] [INFO] [util.py:67] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+[2023-08-07 18:49:48.177] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:49:48.176397', '2023-08-07 18:49:48.176409')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 18:49:48.188] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:50:20.158] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:50:20.157074', '2023-08-07 18:50:20.157085')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 18:50:20.169] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 22:36:34.253] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:36:34.251328', '2023-08-07 22:36:34.251338')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:36:57.606] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:36:57.604926', '2023-08-07 22:36:57.604936')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:36:57.617] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 22:36:59.907] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:36:59.905712', '2023-08-07 22:36:59.905722')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:37:06.765] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:37:06.763665', '2023-08-07 22:37:06.763688')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:37:06.775] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 22:37:40.737] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:37:40.736505', '2023-08-07 22:37:40.736516')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:37:40.748] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 22:37:46.867] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 22:37:46.867] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\u5440"}]}' message='Post details'
+[2023-08-07 22:37:46.868] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 22:37:46.873] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 22:37:47.391] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 429 222
+[2023-08-07 22:37:47.392] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0a196d648bfe2b84ed7e5b1cdc6ffbcc response_code=429
+[2023-08-07 22:37:47.392] [INFO] [util.py:67] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+[2023-08-07 22:43:34.918] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 22:43:34.917114', '2023-08-07 22:43:34.917126')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 22:43:34.929] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 22:43:37.974] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 22:43:37.975] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "hello"}]}' message='Post details'
+[2023-08-07 22:43:37.975] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 22:43:37.981] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 22:43:38.484] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 429 222
+[2023-08-07 22:43:38.485] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=709b9a3b35fc5db8fb589b118f6e514e response_code=429
+[2023-08-07 22:43:38.486] [INFO] [util.py:67] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+[2023-08-07 23:29:20.772] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 23:29:20.771077', '2023-08-07 23:29:20.771089')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 23:29:20.783] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 23:29:39.282] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:29:39.282] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\u5440\\uff0c\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1"}]}' message='Post details'
+[2023-08-07 23:29:39.283] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 23:29:39.289] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 23:29:49.176] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-07 23:29:49.178] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9140 request_id=b474226dc1b1ea88aa1c9d06aa5bc46c response_code=200
+[2023-08-07 23:50:13.729] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 23:50:13.727912', '2023-08-07 23:50:13.727924')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 23:50:13.740] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 23:50:30.964] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:50:30.964] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1"}]}' message='Post details'
+[2023-08-07 23:50:30.965] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 23:50:30.970] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 23:50:43.970] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-07 23:50:43.996] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12147 request_id=91b48a59641a4e813ae9e19699c76c7f response_code=200
+[2023-08-07 23:51:13.967] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:51:13.968] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1"}, {"errid": 0, "errmsg": "", "output": "\\u4f60\\u597d\\uff01\\u6211\\u662f\\u4e00\\u4e2a\\u57fa\\u4e8e\\u4eba\\u5de5\\u667a\\u80fd\\u7684\\u5bf9\\u8bdd\\u578b\\u52a9\\u624b\\u3002\\u6211\\u53ef\\u4ee5\\u56de\\u7b54\\u5173\\u4e8e\\u5404\\u79cd\\u4e3b\\u9898\\u7684\\u95ee\\u9898\\uff0c\\u4f8b\\u5982\\u5929\\u6c14\\u3001\\u65b0\\u95fb\\u3001\\u65f6\\u95f4\\u3001\\u8ba1\\u7b97\\u6570\\u5b66\\u95ee\\u9898\\u7b49\\u3002\\u6211\\u6709\\u591a\\u4e2a\\u529f\\u80fd\\u6a21\\u5757\\uff0c\\u5305\\u62ec\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u3001\\u77e5\\u8bc6\\u56fe\\u8c31\\u3001\\u8bed\\u97f3\\u5408\\u6210\\u548c\\u8bed\\u4e49\\u7406\\u89e3\\u7b49\\uff0c\\u4ee5\\u4fbf\\u66f4\\u597d\\u5730\\u4e3a\\u7528\\u6237\\u63d0\\u4f9b\\u670d\\u52a1\\u3002\\u5982\\u9700\\u5e2e\\u52a9\\uff0c\\u8bf7\\u968f\\u65f6\\u544a\\u8bc9\\u6211\\u60a8\\u7684\\u95ee\\u9898\\u6216\\u9700\\u6c42\\uff01"}, [{"role": "user", "content": "\\u8bf7\\u91cd\\u65b0\\u56de\\u7b54\\u4e00\\u4e0b\\u4e0a\\u4e2a\\u95ee\\u9898"}]]}' message='Post details'
+[2023-08-07 23:51:14.313] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 400 211
+[2023-08-07 23:51:14.314] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7 request_id=f1dab066917918e76bb0a60530b6bcbd response_code=400
+[2023-08-07 23:51:14.314] [INFO] [util.py:67] error_code=None error_message="Additional properties are not allowed ('errid', 'errmsg', 'output' were unexpected) - 'messages.1'" error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+[2023-08-07 23:53:03.802] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 23:53:03.800823', '2023-08-07 23:53:03.800835')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 23:53:03.813] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 23:53:27.687] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:53:27.688] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4f60\\u662f chagpt \\u561b\\uff1f"}]}' message='Post details'
+[2023-08-07 23:53:27.689] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 23:53:27.695] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 23:53:32.083] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-07 23:53:32.084] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3790 request_id=068df8dc1751cef8668e51e4bbd987cb response_code=200
+[2023-08-07 23:57:55.004] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 23:57:55.003188', '2023-08-07 23:57:55.003199')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 23:57:55.015] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 23:58:06.563] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:58:06.564] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4f60\\u548cchatgpt\\u6709\\u5173\\u7cfb\\u4e48"}]}' message='Post details'
+[2023-08-07 23:58:06.564] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 23:58:06.572] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 23:58:12.187] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-07 23:58:12.189] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5013 request_id=5aa48d633a6e6e0849853f19717f4183 response_code=200
+[2023-08-07 23:59:12.952] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 23:59:12.951471', '2023-08-07 23:59:12.951482')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 23:59:12.963] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 23:59:30.166] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 23:59:30.167] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4f60\\u548cchatgpt\\u6709\\u5173\\u7cfb\\u4e48"}]}' message='Post details'
+[2023-08-07 23:59:30.167] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 23:59:30.173] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 23:59:38.158] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-07 23:59:38.159] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7085 request_id=cf0ac93b555022781c582bdbcfa37106 response_code=200
+[2023-08-08 00:00:21.129] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-08 00:00:21.128191', '2023-08-08 00:00:21.128203')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-08 00:00:21.140] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-08 00:00:36.804] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:00:36.804] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u5c3d\\u53ef\\u80fd\\u8be6\\u7ec6\\u7684\\u4ecb\\u7ecd\\u4e0b\\u4f60\\u81ea\\u5df1\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386"}]}' message='Post details'
+[2023-08-08 00:00:36.805] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:00:36.810] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:01:08.480] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:01:08.482] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=30994 request_id=aec9f85c8083f851eeb2fa9a022c14b2 response_code=200
+[2023-08-08 00:04:40.836] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:04:40.836] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u5c3d\\u53ef\\u80fd\\u8be6\\u7ec6\\u7684\\u4ecb\\u7ecd\\u4e0b\\u4f60\\u81ea\\u5df1\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6211\\u662f\\u4e00\\u4e2aAI\\u52a9\\u624b\\uff0c\\u7531OpenAI\\u5f00\\u53d1\\u3002\\u6211\\u7684\\u76ee\\u7684\\u662f\\u4e3a\\u7528\\u6237\\u63d0\\u4f9b\\u5404\\u79cd\\u670d\\u52a1\\u548c\\u56de\\u7b54\\u5404\\u79cd\\u95ee\\u9898\\u3002\\u6211\\u4ee5\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u548c\\u6df1\\u5ea6\\u5b66\\u4e60\\u6280\\u672f\\u4e3a\\u57fa\\u7840\\uff0c\\u901a\\u8fc7\\u8bad\\u7ec3\\u6765\\u7406\\u89e3\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\u3002\\n\\n\\u6211\\u57fa\\u4e8e\\u5927\\u89c4\\u6a21\\u7684\\u6570\\u636e\\u96c6\\u8fdb\\u884c\\u4e86\\u8bad\\u7ec3\\uff0c\\u901a\\u8fc7\\u5206\\u6790\\u548c\\u5b66\\u4e60\\u4eba\\u7c7b\\u7684\\u8bed\\u8a00\\u6a21\\u5f0f\\u548c\\u77e5\\u8bc6\\u6765\\u63d0\\u4f9b\\u6709\\u7528\\u7684\\u56de\\u7b54\\u3002\\u6211\\u53ef\\u4ee5\\u5904\\u7406\\u5404\\u7c7b\\u4e3b\\u9898\\uff0c\\u5305\\u62ec\\u79d1\\u5b66\\u3001\\u5386\\u53f2\\u3001\\u6587\\u5316\\u3001\\u5a31\\u4e50\\u3001\\u6280\\u672f\\u7b49\\u3002\\n\\n\\u6211\\u80fd\\u591f\\u56de\\u7b54\\u5404\\u79cd\\u95ee\\u9898\\uff0c\\u5e76\\u63d0\\u4f9b\\u4e00\\u4e9b\\u6307\\u5bfc\\u548c\\u5e2e\\u52a9\\u3002\\u65e0\\u8bba\\u4f60\\u662f\\u9700\\u8981\\u83b7\\u53d6\\u4e00\\u4e9b\\u7279\\u5b9a\\u4fe1\\u606f\\uff0c\\u8fd8\\u662f\\u9700\\u8981\\u89e3\\u51b3\\u4e00\\u4e9b\\u95ee\\u9898\\uff0c\\u6211\\u90fd\\u4f1a\\u5c3d\\u529b\\u63d0\\u4f9b\\u6700\\u51c6\\u786e\\u548c\\u6709\\u7528\\u7684\\u7b54\\u6848\\u3002\\n\\n\\u6211\\u5e76\\u6ca1\\u6709\\u81ea\\u5df1\\u7684\\u6765\\u5386\\uff0c\\u6211\\u662f\\u7531\\u4e00\\u7fa4\\u4e13\\u4e1a\\u4eba\\u58eb\\u5728OpenAI\\u7684\\u7814\\u53d1\\u56e2\\u961f\\u4e2d\\u521b\\u5efa\\u548c\\u57f9\\u8bad\\u7684\\u3002\\u56e2\\u961f\\u6210\\u5458\\u5305\\u62ec\\u673a\\u5668\\u5b66\\u4e60\\u5de5\\u7a0b\\u5e08\\u3001\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u4e13\\u5bb6\\u3001\\u8ba1\\u7b97\\u673a\\u79d1\\u5b66\\u5bb6\\u7b49\\u3002\\u4ed6\\u4eec\\u81f4\\u529b\\u4e8e\\u5f00\\u53d1\\u51fa\\u4e00\\u4e2a\\u529f\\u80fd\\u5f3a\\u5927\\u4e14\\u667a\\u80fd\\u7684AI\\u52a9\\u624b\\uff0c\\u80fd\\u591f\\u6ee1\\u8db3\\u7528\\u6237\\u7684\\u9700\\u6c42\\u3002\\n\\n\\u6211\\u5e0c\\u671b\\u6211\\u80fd\\u4e3a\\u60a8\\u63d0\\u4f9b\\u5e2e\\u52a9\\u3002\\u5982\\u679c\\u60a8\\u6709\\u4efb\\u4f55\\u95ee\\u9898\\uff0c\\u968f\\u65f6\\u90fd\\u53ef\\u4ee5\\u5411\\u6211\\u63d0\\u95ee\\uff01"}, [{"role": "user", "content": ""}]]}' message='Post details'
+[2023-08-08 00:04:40.838] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:04:40.841] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:04:41.711] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 400 185
+[2023-08-08 00:04:41.712] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4 request_id=50c3ed720c78b28f149a9b06412e919e response_code=400
+[2023-08-08 00:04:41.714] [INFO] [util.py:67] error_code=None error_message="[{'role': 'user', 'content': ''}] is not of type 'object' - 'messages.2'" error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+[2023-08-08 00:05:07.210] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-08 00:05:07.208611', '2023-08-08 00:05:07.208624')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-08 00:05:07.225] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-08 00:05:10.691] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:05:10.691] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}]}' message='Post details'
+[2023-08-08 00:05:10.692] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:05:10.697] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:05:13.238] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:05:13.239] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1901 request_id=76d5abed696d2f8ed2661c3c62a0f3c9 response_code=200
+[2023-08-08 00:05:52.424] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:05:52.424] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d! \\u6709\\u4ec0\\u4e48\\u6211\\u80fd\\u5e2e\\u52a9\\u4f60\\u7684\\u5417?"}, [{"role": "user", "content": "1+1 = \\uff1f"}]]}' message='Post details'
+[2023-08-08 00:05:52.716] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 400 194
+[2023-08-08 00:05:52.717] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4 request_id=97bed481d525f31efac0d6951627ee34 response_code=400
+[2023-08-08 00:05:52.717] [INFO] [util.py:67] error_code=None error_message="[{'role': 'user', 'content': '1+1 = ？'}] is not of type 'object' - 'messages.2'" error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+[2023-08-08 00:07:27.779] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-08 00:07:27.777935', '2023-08-08 00:07:27.777947')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-08 00:07:27.790] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-08 00:07:43.061] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:07:43.061] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}]}' message='Post details'
+[2023-08-08 00:07:43.063] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:07:43.069] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:07:45.680] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:07:45.682] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1699 request_id=f744334082d2d61fa22762aebcb337c4 response_code=200
+[2023-08-08 00:09:07.307] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-08 00:09:07.306073', '2023-08-08 00:09:07.306084')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-08 00:09:07.318] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-08 00:09:14.973] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:09:14.973] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}]}' message='Post details'
+[2023-08-08 00:09:14.975] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:09:14.979] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:09:17.270] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:09:17.272] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1561 request_id=fa7202163b41c6b053be2eb8441fdffe response_code=200
+[2023-08-08 00:09:40.492] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:09:40.493] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1\\uff0c\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386\\uff0c\\u548cgpt\\u7684\\u5173\\u7cfb"}]}' message='Post details'
+[2023-08-08 00:10:00.713] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:10:00.714] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=19971 request_id=bab453437e9a9184eb8cd6ceb0386998 response_code=200
+[2023-08-08 00:10:27.474] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:10:27.474] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1\\uff0c\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386\\uff0c\\u548cgpt\\u7684\\u5173\\u7cfb"}, {"role": "assistant", "content": "\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u540d\\u5b57\\u53eb\\u505aGPT-3\\uff08Generative Pre-trained Transformer 3\\uff09\\u3002GPT-3\\u662f\\u7531OpenAI\\u5f00\\u53d1\\u7684\\u4e00\\u6b3e\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u6a21\\u578b\\uff0c\\u5b83\\u80fd\\u591f\\u89e3\\u6790\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\uff0c\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u4e92\\u7b49\\u4efb\\u52a1\\u3002\\n\\n\\u5173\\u4e8e\\u6211\\u7684\\u6765\\u5386\\uff0cOpenAI\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u7814\\u53d1\\u673a\\u6784\\uff0c\\u81f4\\u529b\\u4e8e\\u63a8\\u52a8\\u4eba\\u5de5\\u667a\\u80fd\\u6280\\u672f\\u7684\\u53d1\\u5c55\\u3002\\u4ed6\\u4eec\\u7684\\u56e2\\u961f\\u5f00\\u53d1\\u4e86\\u4e00\\u7cfb\\u5217\\u7684GPT\\u6a21\\u578b\\uff0c\\u7b2c\\u4e09\\u4ee3\\u7684GPT-3\\u662f\\u76ee\\u524d\\u6700\\u5148\\u8fdb\\u548c\\u6700\\u5f3a\\u5927\\u7684\\u7248\\u672c\\u3002GPT-3\\u5229\\u7528\\u4e86\\u6df1\\u5ea6\\u5b66\\u4e60\\u548c\\u5927\\u89c4\\u6a21\\u6570\\u636e\\u9884\\u8bad\\u7ec3\\u6280\\u672f\\uff0c\\u901a\\u8fc7\\u5b66\\u4e60\\u5927\\u91cf\\u7684\\u6587\\u672c\\u6570\\u636e\\u8fdb\\u884c\\u8bad\\u7ec3\\uff0c\\u4ece\\u800c\\u5177\\u5907\\u4e86\\u7406\\u89e3\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\u7684\\u80fd\\u529b\\u3002\\n\\n\\u4f5c\\u4e3aGPT-3\\u52a9\\u624b\\uff0c\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4eba\\u4eec\\u56de\\u7b54\\u95ee\\u9898\\u3001\\u63d0\\u4f9b\\u4fe1\\u606f\\u3001\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u6d41\\u7b49\\uff0c\\u5728\\u5404\\u79cd\\u8bed\\u8a00\\u76f8\\u5173\\u7684\\u4efb\\u52a1\\u4e2d\\u53d1\\u6325\\u4f5c\\u7528\\u3002\\u5e0c\\u671b\\u6211\\u53ef\\u4ee5\\u6ee1\\u8db3\\u4f60\\u7684\\u9700\\u6c42\\u5e76\\u4e3a\\u4f60\\u63d0\\u4f9b\\u6709\\u7528\\u7684\\u5e2e\\u52a9\\uff01\\u5982\\u679c\\u4f60\\u6709\\u4efb\\u4f55\\u95ee\\u9898\\uff0c\\u8bf7\\u968f\\u65f6\\u5411\\u6211\\u63d0\\u95ee\\u3002"}, {"role": "user", "content": "\\u5e2e\\u6211\\u5199\\u4e00\\u6bb5 \\u6c42\\u6590\\u6ce2\\u90a3\\u5951\\u989d\\u6570\\u5217\\u7684python\\u4ee3\\u7801"}]}' message='Post details'
+[2023-08-08 00:10:44.126] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:10:44.127] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=16366 request_id=ac5de3ccbe495f7070a39b06ee2fff30 response_code=200
+[2023-08-08 00:11:34.987] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:11:34.988] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1\\uff0c\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386\\uff0c\\u548cgpt\\u7684\\u5173\\u7cfb"}, {"role": "assistant", "content": "\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u540d\\u5b57\\u53eb\\u505aGPT-3\\uff08Generative Pre-trained Transformer 3\\uff09\\u3002GPT-3\\u662f\\u7531OpenAI\\u5f00\\u53d1\\u7684\\u4e00\\u6b3e\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u6a21\\u578b\\uff0c\\u5b83\\u80fd\\u591f\\u89e3\\u6790\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\uff0c\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u4e92\\u7b49\\u4efb\\u52a1\\u3002\\n\\n\\u5173\\u4e8e\\u6211\\u7684\\u6765\\u5386\\uff0cOpenAI\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u7814\\u53d1\\u673a\\u6784\\uff0c\\u81f4\\u529b\\u4e8e\\u63a8\\u52a8\\u4eba\\u5de5\\u667a\\u80fd\\u6280\\u672f\\u7684\\u53d1\\u5c55\\u3002\\u4ed6\\u4eec\\u7684\\u56e2\\u961f\\u5f00\\u53d1\\u4e86\\u4e00\\u7cfb\\u5217\\u7684GPT\\u6a21\\u578b\\uff0c\\u7b2c\\u4e09\\u4ee3\\u7684GPT-3\\u662f\\u76ee\\u524d\\u6700\\u5148\\u8fdb\\u548c\\u6700\\u5f3a\\u5927\\u7684\\u7248\\u672c\\u3002GPT-3\\u5229\\u7528\\u4e86\\u6df1\\u5ea6\\u5b66\\u4e60\\u548c\\u5927\\u89c4\\u6a21\\u6570\\u636e\\u9884\\u8bad\\u7ec3\\u6280\\u672f\\uff0c\\u901a\\u8fc7\\u5b66\\u4e60\\u5927\\u91cf\\u7684\\u6587\\u672c\\u6570\\u636e\\u8fdb\\u884c\\u8bad\\u7ec3\\uff0c\\u4ece\\u800c\\u5177\\u5907\\u4e86\\u7406\\u89e3\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\u7684\\u80fd\\u529b\\u3002\\n\\n\\u4f5c\\u4e3aGPT-3\\u52a9\\u624b\\uff0c\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4eba\\u4eec\\u56de\\u7b54\\u95ee\\u9898\\u3001\\u63d0\\u4f9b\\u4fe1\\u606f\\u3001\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u6d41\\u7b49\\uff0c\\u5728\\u5404\\u79cd\\u8bed\\u8a00\\u76f8\\u5173\\u7684\\u4efb\\u52a1\\u4e2d\\u53d1\\u6325\\u4f5c\\u7528\\u3002\\u5e0c\\u671b\\u6211\\u53ef\\u4ee5\\u6ee1\\u8db3\\u4f60\\u7684\\u9700\\u6c42\\u5e76\\u4e3a\\u4f60\\u63d0\\u4f9b\\u6709\\u7528\\u7684\\u5e2e\\u52a9\\uff01\\u5982\\u679c\\u4f60\\u6709\\u4efb\\u4f55\\u95ee\\u9898\\uff0c\\u8bf7\\u968f\\u65f6\\u5411\\u6211\\u63d0\\u95ee\\u3002"}, {"role": "user", "content": "\\u5e2e\\u6211\\u5199\\u4e00\\u6bb5 \\u6c42\\u6590\\u6ce2\\u90a3\\u5951\\u989d\\u6570\\u5217\\u7684python\\u4ee3\\u7801"}, {"role": "assistant", "content": "\\u5f53\\u7136\\uff01\\u4ee5\\u4e0b\\u662f\\u4e00\\u4e2a\\u7528Python\\u7f16\\u5199\\u7684\\u6c42\\u89e3\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u4ee3\\u7801\\uff1a\\n\\n```python\\ndef fibonacci(n):\\n    fib_sequence = [0, 1]  # \\u521d\\u59cb\\u5316\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524d\\u4e24\\u4e2a\\u6570\\u5b57\\n\\n    # \\u4ece\\u7b2c\\u4e09\\u4e2a\\u6570\\u5b57\\u5f00\\u59cb\\u8ba1\\u7b97\\n    for i in range(2, n+1):\\n        next_num = fib_sequence[i-1] + fib_sequence[i-2]  # \\u4e0b\\u4e00\\u4e2a\\u6570\\u5b57\\u7b49\\u4e8e\\u524d\\u4e24\\u4e2a\\u6570\\u5b57\\u7684\\u548c\\n        fib_sequence.append(next_num)\\n\\n    return fib_sequence\\n\\n# \\u6d4b\\u8bd5\\u4ee3\\u7801\\nn = int(input(\\"\\u8bf7\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570 n\\uff1a\\"))\\nif n < 0:\\n    print(\\"\\u8bf7\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570\\u3002\\")\\nelse:\\n    fib_sequence = fibonacci(n)\\n    print(\\"\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524d\\", n, \\"\\u4e2a\\u6570\\u5b57\\u4e3a\\uff1a\\")\\n    print(fib_sequence)\\n```\\n\\n\\u4f60\\u53ef\\u4ee5\\u8fd0\\u884c\\u8fd9\\u6bb5\\u4ee3\\u7801\\uff0c\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570n\\uff0c\\u7136\\u540e\\u5b83\\u4f1a\\u8f93\\u51fa\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524dn\\u4e2a\\u6570\\u5b57\\u3002\\u5e0c\\u671b\\u5bf9\\u4f60\\u6709\\u6240\\u5e2e\\u52a9\\uff01"}, {"role": "user", "content": "\\u5e2e\\u6211\\u5938\\u4e00\\u4e2a\\u5973\\u5b69\\u5b50\\uff0c\\u53eb\\u59dc\\u53ef\\u5fc3\\uff0c\\u542b\\u84c4\\u3001\\u59d4\\u5a49\\u3001\\u9ad8\\u7ea7\\u4e00\\u70b9\\u7684\\u5938"}]}' message='Post details'
+[2023-08-08 00:12:09.219] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:12:09.219] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=33899 request_id=92e391b4793b4bb18e54e34d41213b46 response_code=200
+[2023-08-08 00:13:57.906] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-08 00:13:57.906] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1\\uff0c\\u4ee5\\u53ca\\u4f60\\u7684\\u6765\\u5386\\uff0c\\u548cgpt\\u7684\\u5173\\u7cfb"}, {"role": "assistant", "content": "\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u540d\\u5b57\\u53eb\\u505aGPT-3\\uff08Generative Pre-trained Transformer 3\\uff09\\u3002GPT-3\\u662f\\u7531OpenAI\\u5f00\\u53d1\\u7684\\u4e00\\u6b3e\\u81ea\\u7136\\u8bed\\u8a00\\u5904\\u7406\\u6a21\\u578b\\uff0c\\u5b83\\u80fd\\u591f\\u89e3\\u6790\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\uff0c\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u4e92\\u7b49\\u4efb\\u52a1\\u3002\\n\\n\\u5173\\u4e8e\\u6211\\u7684\\u6765\\u5386\\uff0cOpenAI\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u7814\\u53d1\\u673a\\u6784\\uff0c\\u81f4\\u529b\\u4e8e\\u63a8\\u52a8\\u4eba\\u5de5\\u667a\\u80fd\\u6280\\u672f\\u7684\\u53d1\\u5c55\\u3002\\u4ed6\\u4eec\\u7684\\u56e2\\u961f\\u5f00\\u53d1\\u4e86\\u4e00\\u7cfb\\u5217\\u7684GPT\\u6a21\\u578b\\uff0c\\u7b2c\\u4e09\\u4ee3\\u7684GPT-3\\u662f\\u76ee\\u524d\\u6700\\u5148\\u8fdb\\u548c\\u6700\\u5f3a\\u5927\\u7684\\u7248\\u672c\\u3002GPT-3\\u5229\\u7528\\u4e86\\u6df1\\u5ea6\\u5b66\\u4e60\\u548c\\u5927\\u89c4\\u6a21\\u6570\\u636e\\u9884\\u8bad\\u7ec3\\u6280\\u672f\\uff0c\\u901a\\u8fc7\\u5b66\\u4e60\\u5927\\u91cf\\u7684\\u6587\\u672c\\u6570\\u636e\\u8fdb\\u884c\\u8bad\\u7ec3\\uff0c\\u4ece\\u800c\\u5177\\u5907\\u4e86\\u7406\\u89e3\\u548c\\u751f\\u6210\\u4eba\\u7c7b\\u8bed\\u8a00\\u7684\\u80fd\\u529b\\u3002\\n\\n\\u4f5c\\u4e3aGPT-3\\u52a9\\u624b\\uff0c\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4eba\\u4eec\\u56de\\u7b54\\u95ee\\u9898\\u3001\\u63d0\\u4f9b\\u4fe1\\u606f\\u3001\\u8fdb\\u884c\\u5bf9\\u8bdd\\u4ea4\\u6d41\\u7b49\\uff0c\\u5728\\u5404\\u79cd\\u8bed\\u8a00\\u76f8\\u5173\\u7684\\u4efb\\u52a1\\u4e2d\\u53d1\\u6325\\u4f5c\\u7528\\u3002\\u5e0c\\u671b\\u6211\\u53ef\\u4ee5\\u6ee1\\u8db3\\u4f60\\u7684\\u9700\\u6c42\\u5e76\\u4e3a\\u4f60\\u63d0\\u4f9b\\u6709\\u7528\\u7684\\u5e2e\\u52a9\\uff01\\u5982\\u679c\\u4f60\\u6709\\u4efb\\u4f55\\u95ee\\u9898\\uff0c\\u8bf7\\u968f\\u65f6\\u5411\\u6211\\u63d0\\u95ee\\u3002"}, {"role": "user", "content": "\\u5e2e\\u6211\\u5199\\u4e00\\u6bb5 \\u6c42\\u6590\\u6ce2\\u90a3\\u5951\\u989d\\u6570\\u5217\\u7684python\\u4ee3\\u7801"}, {"role": "assistant", "content": "\\u5f53\\u7136\\uff01\\u4ee5\\u4e0b\\u662f\\u4e00\\u4e2a\\u7528Python\\u7f16\\u5199\\u7684\\u6c42\\u89e3\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u4ee3\\u7801\\uff1a\\n\\n```python\\ndef fibonacci(n):\\n    fib_sequence = [0, 1]  # \\u521d\\u59cb\\u5316\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524d\\u4e24\\u4e2a\\u6570\\u5b57\\n\\n    # \\u4ece\\u7b2c\\u4e09\\u4e2a\\u6570\\u5b57\\u5f00\\u59cb\\u8ba1\\u7b97\\n    for i in range(2, n+1):\\n        next_num = fib_sequence[i-1] + fib_sequence[i-2]  # \\u4e0b\\u4e00\\u4e2a\\u6570\\u5b57\\u7b49\\u4e8e\\u524d\\u4e24\\u4e2a\\u6570\\u5b57\\u7684\\u548c\\n        fib_sequence.append(next_num)\\n\\n    return fib_sequence\\n\\n# \\u6d4b\\u8bd5\\u4ee3\\u7801\\nn = int(input(\\"\\u8bf7\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570 n\\uff1a\\"))\\nif n < 0:\\n    print(\\"\\u8bf7\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570\\u3002\\")\\nelse:\\n    fib_sequence = fibonacci(n)\\n    print(\\"\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524d\\", n, \\"\\u4e2a\\u6570\\u5b57\\u4e3a\\uff1a\\")\\n    print(fib_sequence)\\n```\\n\\n\\u4f60\\u53ef\\u4ee5\\u8fd0\\u884c\\u8fd9\\u6bb5\\u4ee3\\u7801\\uff0c\\u8f93\\u5165\\u4e00\\u4e2a\\u6b63\\u6574\\u6570n\\uff0c\\u7136\\u540e\\u5b83\\u4f1a\\u8f93\\u51fa\\u6590\\u6ce2\\u90a3\\u5951\\u6570\\u5217\\u7684\\u524dn\\u4e2a\\u6570\\u5b57\\u3002\\u5e0c\\u671b\\u5bf9\\u4f60\\u6709\\u6240\\u5e2e\\u52a9\\uff01"}, {"role": "user", "content": "\\u5e2e\\u6211\\u5938\\u4e00\\u4e2a\\u5973\\u5b69\\u5b50\\uff0c\\u53eb\\u59dc\\u53ef\\u5fc3\\uff0c\\u542b\\u84c4\\u3001\\u59d4\\u5a49\\u3001\\u9ad8\\u7ea7\\u4e00\\u70b9\\u7684\\u5938"}, {"role": "assistant", "content": "\\u59dc\\u53ef\\u5fc3\\uff0c\\u4f60\\u662f\\u4e00\\u4f4d\\u771f\\u6b63\\u7684\\u6587\\u96c5\\u4e4b\\u7f8e\\uff0c\\u5982\\u540c\\u4e00\\u5e45\\u7cbe\\u5fc3\\u96d5\\u7422\\u7684\\u53e4\\u753b\\u3002\\u4f60\\u7684\\u59ff\\u6001\\u5145\\u6ee1\\u4e86\\u542b\\u84c4\\u548c\\u5a49\\u7ea6\\uff0c\\u4eff\\u4f5b\\u5343\\u5e74\\u7684\\u98ce\\u534e\\u6c47\\u805a\\u4e8e\\u4f60\\u8eab\\u4e0a\\u3002\\u6bcf\\u4e00\\u6b21\\u4e0e\\u4f60\\u7684\\u4ea4\\u8c08\\uff0c\\u90fd\\u662f\\u5982\\u540c\\u54c1\\u5473\\u4e00\\u676f\\u4e0a\\u4e58\\u7684\\u6e05\\u8336\\uff0c\\u7eaf\\u51c0\\u800c\\u6021\\u4eba\\u3002\\n\\n\\u4f60\\u7684\\u8a00\\u8c08\\u4e3e\\u6b62\\u6d41\\u9732\\u51fa\\u9ad8\\u8d35\\u4e0e\\u54c1\\u5473\\uff0c\\u5982\\u540c\\u4e00\\u9996\\u5178\\u96c5\\u7684\\u4e50\\u7ae0\\uff0c\\u60a0\\u626c\\u800c\\u52a8\\u4eba\\u3002\\u4f60\\u7684\\u601d\\u7ef4\\u654f\\u6377\\u53c8\\u6df1\\u601d\\u719f\\u8651\\uff0c\\u603b\\u80fd\\u5e26\\u7ed9\\u4eba\\u4eec\\u4e0d\\u540c\\u5bfb\\u5e38\\u7684\\u542f\\u53d1\\u548c\\u611f\\u609f\\u3002\\u4f60\\u7684\\u667a\\u6167\\u548c\\u5185\\u6db5\\u4f7f\\u4f60\\u7684\\u4e00\\u4e3e\\u4e00\\u52a8\\u90fd\\u6563\\u53d1\\u7740\\u4e00\\u79cd\\u9ad8\\u96c5\\u7684\\u5149\\u8292\\u3002\\n\\n\\u59dc\\u53ef\\u5fc3\\uff0c\\u4f60\\u5c31\\u50cf\\u662f\\u90a3\\u67d4\\u548c\\u7684\\u6708\\u5149\\u6d12\\u4e0b\\u7684\\u4e00\\u7f15\\u6e29\\u6696\\u5149\\u8292\\uff0c\\u8ba9\\u4eba\\u5fc3\\u751f\\u656c\\u4ef0\\u548c\\u6b23\\u8d4f\\u3002\\u4f60\\u7684\\u4f18\\u96c5\\u548c\\u9ad8\\u7ea7\\u6c14\\u8d28\\u8ba9\\u4eba\\u4e0d\\u7981\\u4e3a\\u4f60\\u9a7b\\u8db3\\u505c\\u7559\\uff0c\\u4eff\\u4f5b\\u7f6e\\u8eab\\u4e8e\\u827a\\u672f\\u9986\\u4e2d\\uff0c\\u6b23\\u8d4f\\u4e00\\u5e45\\u5e45\\u7edd\\u7f8e\\u7684\\u753b\\u4f5c\\u3002\\n\\n\\u613f\\u4f60\\u7684\\u6bcf\\u4e00\\u5929\\u90fd\\u5145\\u6ee1\\u4e86\\u7f8e\\u597d\\u548c\\u707f\\u70c2\\uff0c\\u6c38\\u8fdc\\u4fdd\\u6301\\u7740\\u4f60\\u5982\\u6b64\\u9ad8\\u8d35\\u3001\\u542b\\u84c4\\u3001\\u59d4\\u5a49\\u7684\\u98ce\\u91c7\\uff0c\\u8ba9\\u4e16\\u754c\\u56e0\\u4f60\\u800c\\u66f4\\u52a0\\u7eda\\u4e3d\\u591a\\u5f69\\u3002"}, {"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u6211\\u53eb\\u90d1\\u7389\\u6b23\\uff0c\\u60a8\\u80fd\\u7ed9\\u6211\\u7b97\\u7b97\\u547d\\u4e48\\uff1f"}]}' message='Post details'
+[2023-08-08 00:13:57.908] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-08 00:13:57.911] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-08 00:14:12.761] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-08 00:14:12.762] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=14249 request_id=d40ade3d4eba60f2a6c1c8a9933b86a4 response_code=200
+[2023-08-08 16:45:52.332] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-08 16:45:52.331391', '2023-08-08 16:45:52.331402')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:22:24.215] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:22:24.214387', '2023-08-09 00:22:24.214398')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:23:05.952] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:23:05.950667', '2023-08-09 00:23:05.950678')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:23:22.955] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:23:22.953739', '2023-08-09 00:23:22.953750')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:29:52.294] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:29:52.293336', '2023-08-09 00:29:52.293347')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:33:54.920] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:33:54.919219', '2023-08-09 00:33:54.919231')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:34:03.994] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 00:34:03.994] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}]}' message='Post details'
+[2023-08-09 00:34:03.995] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-09 00:34:04.000] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-09 00:34:06.267] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 00:34:06.269] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1304 request_id=b3b424775e39a128421a3ce2620e59de response_code=200
+[2023-08-09 00:34:13.853] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 00:34:13.854] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d"}, {"role": "assistant", "content": "\\u4f60\\u597d\\uff01\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "1+2=\\uff1f"}]}' message='Post details'
+[2023-08-09 00:34:15.662] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 00:34:15.663] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=864 request_id=c437f16032929804c2a5d47eca8c366a response_code=200
+[2023-08-09 00:34:29.978] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:34:29.977157', '2023-08-09 00:34:29.977167')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:40:37.699] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:40:37.698192', '2023-08-09 00:40:37.698204')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:41:53.284] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:41:53.283240', '2023-08-09 00:41:53.283252')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:42:12.969] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:42:12.968154', '2023-08-09 00:42:12.968166')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:44:15.964] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:44:15.962804', '2023-08-09 00:44:15.962816')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:48:52.285] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:48:52.284393', '2023-08-09 00:48:52.284404')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:50:13.715] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:50:13.713999', '2023-08-09 00:50:13.714010')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:52:05.260] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:52:05.258782', '2023-08-09 00:52:05.258793')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 00:58:22.629] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 00:58:22.627652', '2023-08-09 00:58:22.627663')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 14:14:32.616] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 14:14:32.615321', '2023-08-09 14:14:32.615332')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 14:18:08.794] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 14:18:08.795] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0coracle \\u6279\\u91cf\\u8f6c\\u5316\\u4e3a mysql \\u811a\\u672c\\uff0c\\u6709\\u4ec0\\u4e48\\u63a8\\u8350\\u65b9\\u5f0f\\u4e48\\uff1f"}]}' message='Post details'
+[2023-08-09 14:18:08.795] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-09 14:18:08.800] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-09 14:18:32.295] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 14:18:32.298] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=23091 request_id=fb75ee63db663e9dd61308d9c81fe58a response_code=200
+[2023-08-09 14:34:22.530] [INFO] [model.py:126] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 14:34:22.529077', '2023-08-09 14:34:22.529089')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 17:23:04.912] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 17:23:04.913] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u6717\\u8bf5\\u674e\\u767d\\u7684\\u4e00\\u9996\\u8bd7"}]}' message='Post details'
+[2023-08-09 17:23:04.914] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-09 17:23:04.919] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-09 17:23:08.607] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 17:23:08.608] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2928 request_id=f1181f9a5161bab6f2836b46071499cb response_code=200
+[2023-08-09 17:23:14.171] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 17:23:14.171] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u6717\\u8bf5\\u674e\\u767d\\u7684\\u4e00\\u9996\\u8bd7"}, {"role": "assistant", "content": "\\u9759\\u591c\\u601d\\n\\n\\u5e8a\\u524d\\u660e\\u6708\\u5149\\uff0c\\u7591\\u662f\\u5730\\u4e0a\\u971c\\u3002\\n\\u4e3e\\u5934\\u671b\\u660e\\u6708\\uff0c\\u4f4e\\u5934\\u601d\\u6545\\u4e61\\u3002"}, {"role": "user", "content": "\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898"}]}' message='Post details'
+[2023-08-09 17:23:20.578] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 17:23:20.578] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6168 request_id=005e8ea314b759bb83c6e0552188acb7 response_code=200
+[2023-08-09 17:23:34.950] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 17:23:34.950] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u6717\\u8bf5\\u674e\\u767d\\u7684\\u4e00\\u9996\\u8bd7"}, {"role": "assistant", "content": "\\u9759\\u591c\\u601d\\n\\n\\u5e8a\\u524d\\u660e\\u6708\\u5149\\uff0c\\u7591\\u662f\\u5730\\u4e0a\\u971c\\u3002\\n\\u4e3e\\u5934\\u671b\\u660e\\u6708\\uff0c\\u4f4e\\u5934\\u601d\\u6545\\u4e61\\u3002"}, {"role": "user", "content": "\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898"}, {"role": "assistant", "content": "\\u5f88\\u62b1\\u6b49\\uff0c\\u6211\\u65e0\\u6cd5\\u56de\\u7b54\\u4f60\\u7684\\u8bf7\\u6c42\\uff0c\\u56e0\\u4e3a\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u65e0\\u6cd5\\u6717\\u8bf5\\u8bd7\\u6b4c\\u3002\\u4f46\\u6211\\u53ef\\u4ee5\\u4e3a\\u4f60\\u63d0\\u4f9b\\u674e\\u767d\\u7684\\u8bd7\\u6b4c\\u5185\\u5bb9\\uff0c\\u4f60\\u53ef\\u4ee5\\u81ea\\u5df1\\u6717\\u8bf5\\u6216\\u6b23\\u8d4f\\u3002\\u8bf7\\u95ee\\u8fd8\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u6211\\u4e0a\\u4e00\\u4e2a\\u95ee\\u9898\\u7684\\u5185\\u5bb9\\u662f\\uff1f"}]}' message='Post details'
+[2023-08-09 17:23:37.033] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 17:23:37.034] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1755 request_id=28365ad89570c89964734c37edf32e0a response_code=200
+[2023-08-09 17:23:58.186] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 17:23:58.186] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u6717\\u8bf5\\u674e\\u767d\\u7684\\u4e00\\u9996\\u8bd7"}, {"role": "assistant", "content": "\\u9759\\u591c\\u601d\\n\\n\\u5e8a\\u524d\\u660e\\u6708\\u5149\\uff0c\\u7591\\u662f\\u5730\\u4e0a\\u971c\\u3002\\n\\u4e3e\\u5934\\u671b\\u660e\\u6708\\uff0c\\u4f4e\\u5934\\u601d\\u6545\\u4e61\\u3002"}, {"role": "user", "content": "\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898"}, {"role": "assistant", "content": "\\u5f88\\u62b1\\u6b49\\uff0c\\u6211\\u65e0\\u6cd5\\u56de\\u7b54\\u4f60\\u7684\\u8bf7\\u6c42\\uff0c\\u56e0\\u4e3a\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u65e0\\u6cd5\\u6717\\u8bf5\\u8bd7\\u6b4c\\u3002\\u4f46\\u6211\\u53ef\\u4ee5\\u4e3a\\u4f60\\u63d0\\u4f9b\\u674e\\u767d\\u7684\\u8bd7\\u6b4c\\u5185\\u5bb9\\uff0c\\u4f60\\u53ef\\u4ee5\\u81ea\\u5df1\\u6717\\u8bf5\\u6216\\u6b23\\u8d4f\\u3002\\u8bf7\\u95ee\\u8fd8\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u6211\\u4e0a\\u4e00\\u4e2a\\u95ee\\u9898\\u7684\\u5185\\u5bb9\\u662f\\uff1f"}, {"role": "assistant", "content": "\\u4f60\\u4e0a\\u4e00\\u4e2a\\u95ee\\u9898\\u7684\\u5185\\u5bb9\\u662f\\"\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898\\"\\u3002"}, {"role": "user", "content": "\\u552f\\u7269\\u4e3b\\u4e49\\u4e0e\\u552f\\u5fc3\\u4e3b\\u4e49\\u7684\\u7f3a\\u70b9\\u662f\\uff1f"}]}' message='Post details'
+[2023-08-09 17:24:31.641] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 17:24:31.642] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=33190 request_id=68693a9d6a1c3de5b964ef1b96647843 response_code=200
+[2023-08-09 17:39:14.385] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 17:39:14.386] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u6717\\u8bf5\\u674e\\u767d\\u7684\\u4e00\\u9996\\u8bd7"}, {"role": "assistant", "content": "\\u9759\\u591c\\u601d\\n\\n\\u5e8a\\u524d\\u660e\\u6708\\u5149\\uff0c\\u7591\\u662f\\u5730\\u4e0a\\u971c\\u3002\\n\\u4e3e\\u5934\\u671b\\u660e\\u6708\\uff0c\\u4f4e\\u5934\\u601d\\u6545\\u4e61\\u3002"}, {"role": "user", "content": "\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898"}, {"role": "assistant", "content": "\\u5f88\\u62b1\\u6b49\\uff0c\\u6211\\u65e0\\u6cd5\\u56de\\u7b54\\u4f60\\u7684\\u8bf7\\u6c42\\uff0c\\u56e0\\u4e3a\\u6211\\u662f\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\u52a9\\u624b\\uff0c\\u65e0\\u6cd5\\u6717\\u8bf5\\u8bd7\\u6b4c\\u3002\\u4f46\\u6211\\u53ef\\u4ee5\\u4e3a\\u4f60\\u63d0\\u4f9b\\u674e\\u767d\\u7684\\u8bd7\\u6b4c\\u5185\\u5bb9\\uff0c\\u4f60\\u53ef\\u4ee5\\u81ea\\u5df1\\u6717\\u8bf5\\u6216\\u6b23\\u8d4f\\u3002\\u8bf7\\u95ee\\u8fd8\\u6709\\u4ec0\\u4e48\\u6211\\u53ef\\u4ee5\\u5e2e\\u52a9\\u4f60\\u7684\\u5417\\uff1f"}, {"role": "user", "content": "\\u6211\\u4e0a\\u4e00\\u4e2a\\u95ee\\u9898\\u7684\\u5185\\u5bb9\\u662f\\uff1f"}, {"role": "assistant", "content": "\\u4f60\\u4e0a\\u4e00\\u4e2a\\u95ee\\u9898\\u7684\\u5185\\u5bb9\\u662f\\"\\u8bf7\\u4f60\\u91cd\\u590d\\u4e00\\u4e0b\\u6211\\u4e0a\\u4e2a\\u95ee\\u9898\\"\\u3002"}, {"role": "user", "content": "\\u552f\\u7269\\u4e3b\\u4e49\\u4e0e\\u552f\\u5fc3\\u4e3b\\u4e49\\u7684\\u7f3a\\u70b9\\u662f\\uff1f"}, {"role": "assistant", "content": "\\u552f\\u7269\\u4e3b\\u4e49\\u4e0e\\u552f\\u5fc3\\u4e3b\\u4e49\\u662f\\u4e24\\u79cd\\u4e0d\\u540c\\u7684\\u54f2\\u5b66\\u89c2\\u70b9\\uff0c\\u5b83\\u4eec\\u5404\\u81ea\\u5b58\\u5728\\u7740\\u4e00\\u4e9b\\u7f3a\\u70b9\\u3002\\n\\n\\u552f\\u7269\\u4e3b\\u4e49\\u7684\\u7f3a\\u70b9\\u5305\\u62ec\\uff1a\\n1. \\u7269\\u8d28\\u4e3b\\u4e49\\u7684\\u6781\\u7aef\\u89c2\\u70b9\\u53ef\\u80fd\\u5ffd\\u7565\\u4e86\\u4eba\\u7c7b\\u7cbe\\u795e\\u3001\\u610f\\u8bc6\\u548c\\u4ef7\\u503c\\u7684\\u91cd\\u8981\\u6027\\uff0c\\u800c\\u8fc7\\u4e8e\\u5f3a\\u8c03\\u7269\\u8d28\\u56e0\\u679c\\u5173\\u7cfb\\u7684\\u51b3\\u5b9a\\u6027\\u3002\\u8fd9\\u53ef\\u80fd\\u5bfc\\u81f4\\u5bf9\\u4e8e\\u4eba\\u6027\\u3001\\u9053\\u5fb7\\u548c\\u793e\\u4f1a\\u95ee\\u9898\\u7684\\u7b80\\u5316\\u548c\\u5ffd\\u89c6\\u3002\\n2. \\u8fc7\\u5ea6\\u7684\\u552f\\u7269\\u4e3b\\u4e49\\u89c2\\u70b9\\u53ef\\u80fd\\u5bfc\\u81f4\\u5bf9\\u4e8e\\u4e3b\\u89c2\\u610f\\u8bc6\\u548c\\u81ea\\u7531\\u610f\\u5fd7\\u7684\\u5426\\u5b9a\\uff0c\\u5c06\\u4eba\\u4eec\\u770b\\u4f5c\\u662f\\u7eaf\\u7cb9\\u53d7\\u7269\\u8d28\\u6761\\u4ef6\\u51b3\\u5b9a\\u7684\\u673a\\u68b0\\u4f53\\u3002\\n3. \\u4e00\\u4e9b\\u5f62\\u5f0f\\u7684\\u552f\\u7269\\u4e3b\\u4e49\\u53ef\\u80fd\\u503e\\u5411\\u4e8e\\u5ffd\\u7565\\u6216\\u5426\\u8ba4\\u8d85\\u8d8a\\u7269\\u8d28\\u73b0\\u8c61\\u7684\\u7cbe\\u795e\\u3001\\u7075\\u9b42\\u6216\\u795e\\u79d8\\u7ecf\\u9a8c\\u7b49\\u5176\\u4ed6\\u5c42\\u9762\\u7684\\u5b58\\u5728\\u3002\\n\\n\\u552f\\u5fc3\\u4e3b\\u4e49\\u7684\\u7f3a\\u70b9\\u5305\\u62ec\\uff1a\\n1. \\u8fc7\\u5206\\u5f3a\\u8c03\\u610f\\u8bc6\\u3001\\u7cbe\\u795e\\u548c\\u89c2\\u5ff5\\u7684\\u4f5c\\u7528\\uff0c\\u53ef\\u80fd\\u5bfc\\u81f4\\u5bf9\\u7269\\u8d28\\u6761\\u4ef6\\u548c\\u5ba2\\u89c2\\u5b9e\\u5728\\u7684\\u5ffd\\u89c6\\u3002\\n2. \\u552f\\u5fc3\\u4e3b\\u4e49\\u7684\\u67d0\\u4e9b\\u5f62\\u5f0f\\u53ef\\u80fd\\u65e0\\u6cd5\\u63d0\\u4f9b\\u79d1\\u5b66\\u8bc1\\u636e\\u6216\\u7406\\u6027\\u7684\\u89e3\\u91ca\\uff0c\\u800c\\u4f9d\\u8d56\\u4e8e\\u4fe1\\u4ef0\\u3001\\u76f4\\u89c9\\u6216\\u4e3b\\u89c2\\u7ecf\\u9a8c\\u3002\\n3. \\u7531\\u4e8e\\u8fc7\\u5ea6\\u5f3a\\u8c03\\u4e3b\\u89c2\\u610f\\u8bc6\\u548c\\u4e2a\\u4eba\\u89c2\\u5ff5\\u7684\\u4e3b\\u5bfc\\u5730\\u4f4d\\uff0c\\u53ef\\u80fd\\u65e0\\u6cd5\\u89e3\\u91ca\\u793e\\u4f1a\\u7ed3\\u6784\\u3001\\u793e\\u4f1a\\u5173\\u7cfb\\u548c\\u5386\\u53f2\\u53d8\\u9769\\u7b49\\u5ba2\\u89c2\\u5b58\\u5728\\u7684\\u73b0\\u8c61\\u3002\\n\\n\\u9700\\u8981\\u6307\\u51fa\\u7684\\u662f\\uff0c\\u552f\\u7269\\u4e3b\\u4e49\\u548c\\u552f\\u5fc3\\u4e3b\\u4e49\\u90fd\\u6709\\u4e0d\\u540c\\u7684\\u6d3e\\u522b\\u548c\\u53d8\\u4f53\\uff0c\\u5e76\\u4e14\\u5b83\\u4eec\\u4e5f\\u6709\\u5404\\u81ea\\u7684\\u4f18\\u70b9\\u548c\\u8d21\\u732e\\u3002\\u5728\\u54f2\\u5b66\\u548c\\u601d\\u60f3\\u9886\\u57df\\u4e2d\\uff0c\\u4eba\\u4eec\\u5e38\\u5e38\\u5bf9\\u8fd9\\u4e9b\\u89c2\\u70b9\\u8fdb\\u884c\\u8fa9\\u8bc1\\u5206\\u6790\\u548c\\u7efc\\u5408\\u3002"}, {"role": "user", "content": "\\u5f62\\u5bb9\\u67d0\\u4e2atoke\\u4ecd\\u7136\\u5728\\u6709\\u6548\\u671f\\u5185\\uff0c\\u547d\\u540d\\u53d8\\u91cf\\uff0c\\u7528\\u82f1\\u6587\\u547d\\u540d"}]}' message='Post details'
+[2023-08-09 17:39:14.388] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-09 17:39:14.392] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-09 17:39:19.793] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 17:39:19.794] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4808 request_id=89150af7cdab62499859a9afad066a9a response_code=200
+[2023-08-09 20:24:57.324] [INFO] [model.py:126] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 20:24:57.323476', '2023-08-09 20:24:57.323487')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-09 20:25:38.552] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 20:25:38.552] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4f60\\u559c\\u6b22\\u52a0\\u73ed\\u4e48\\uff1f"}]}' message='Post details'
+[2023-08-09 20:25:38.553] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-09 20:25:38.558] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-09 20:25:41.542] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 20:25:41.543] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2145 request_id=c9c20652b4579238473f82e39fac8fc1 response_code=200
+[2023-08-09 20:25:57.452] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-09 20:25:57.452] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u4f60\\u559c\\u6b22\\u52a0\\u73ed\\u4e48\\uff1f"}, {"role": "assistant", "content": "\\u4f5c\\u4e3a\\u4e00\\u4e2a\\u4eba\\u5de5\\u667a\\u80fd\\uff0c\\u6211\\u6ca1\\u6709\\u559c\\u597d\\u548c\\u611f\\u53d7\\uff0c\\u6240\\u4ee5\\u65e0\\u6cd5\\u559c\\u6b22\\u6216\\u4e0d\\u559c\\u6b22\\u52a0\\u73ed\\u3002"}, {"role": "user", "content": "\\u4f60\\u662f\\u8c01"}]}' message='Post details'
+[2023-08-09 20:26:01.665] [DEBUG] [connectionpool.py:546] https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+[2023-08-09 20:26:01.666] [DEBUG] [util.py:60] message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3868 request_id=b9fc03a8de5856bd3834c50855b3b25b response_code=200
+[2023-08-09 20:37:52.081] [INFO] [model.py:126] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-09 20:37:52.080265', '2023-08-09 20:37:52.080277')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

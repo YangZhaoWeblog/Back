@@ -1,0 +1,66 @@
+[2023-08-04 18:34:32.129] [INFO] [model.py:119] Exception Ocurred: SqlOperator.insert_one_row() takes 3 positional arguments but 4 were given
+[2023-08-07 10:32:24.701] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 10:32:24.699604', '2023-08-07 10:32:24.699615')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 10:34:27.595] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 10:34:27.593874', '2023-08-07 10:34:27.593886')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 10:34:27.605] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-07 10:35:05.304] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 10:35:05.303224', '2023-08-07 10:35:05.303235')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 10:36:43.730] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 10:36:43.728774', '2023-08-07 10:36:43.728786')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 10:36:43.740] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-07 10:39:48.891] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 10:39:48.889925', '2023-08-07 10:39:48.889938')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 10:39:48.903] [INFO] [tools.py:22] Error: Error: 该用户已在其他端登陆
+[2023-08-07 10:39:59.301] [DEBUG] [util.py:60] message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+[2023-08-07 10:39:59.301] [DEBUG] [util.py:60] api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "\\u4f60\\u597d\\uff0c\\u8bf7\\u4ecb\\u7ecd\\u4e00\\u4e0b\\u4f60\\u81ea\\u5df1"}]}' message='Post details'
+[2023-08-07 10:39:59.302] [DEBUG] [retry.py:282] Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+[2023-08-07 10:39:59.309] [DEBUG] [connectionpool.py:1048] Starting new HTTPS connection (1): api.openai.com:443
+[2023-08-07 17:56:42.036] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:56:42.036151', '2023-08-07 17:56:42.036160')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:56:42.041] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:57:18.910] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:57:18.910398', '2023-08-07 17:57:18.910408')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:57:18.915] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:57:55.994] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:57:55.993678', '2023-08-07 17:57:55.993687')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:57:55.998] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:58:07.921] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:58:07.920769', '2023-08-07 17:58:07.920778')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:58:07.925] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:58:22.622] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:58:22.622198', '2023-08-07 17:58:22.622208')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:58:22.627] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 17:58:46.234] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:58:46.233171', '2023-08-07 17:58:46.233183')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:59:54.232] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 17:59:54.230969', '2023-08-07 17:59:54.230992')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-08-07 17:59:54.243] [INFO] [tools.py:28] Error: Error: 该用户已在其他端登陆
+[2023-08-07 18:20:22.752] [INFO] [model.py:119] Exception Ocurred: (sqlite3.IntegrityError) column username is not unique
+[SQL: INSERT INTO t_user (username, password, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('test', '1', '', '', '2023-08-07 18:20:22.750958', '2023-08-07 18:20:22.750969')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

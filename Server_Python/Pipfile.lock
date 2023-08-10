@@ -1,0 +1,20 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "96abd4dec02c73ab906cc7af677ee7a993ac18bffb3ef2cbb17f460cf58c9b0b"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "2.7"
+        },
+        "sources": [
+            {
+                "name": "pip_conf_index_global",
+                "url": "http://mirrors.tencentyun.com/pypi/simple",
+                "verify_ssl": false
+            }
+        ]
+    },
+    "default": {},
+    "develop": {}
+}

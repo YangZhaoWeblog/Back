@@ -13,16 +13,15 @@
 感觉 orm 执行数据库操作，没有原生 sql 语句方便，顺畅。
 但是屏蔽了数据库差异，oracle、mysql、sqlite 等都能用
 """
+from sqlite3 import IntegrityError
 from tools import current_dir
+from logger import logger
 from sqlalchemy import Table, create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, backref, sessionmaker, declarative_base
-
-Base = declarative_base()
-
-
 from functools import wraps
 from datetime import datetime
 
+Base = declarative_base()
 '''
  数据库创建相关 Setting
 '''
@@ -64,22 +63,21 @@ class UserTable(Base):
     created_at = Column(DateTime, default=datetime.now)
     updated_at = Column(DateTime, default=datetime.now)
 
-
 class UserTokenTable(Base):
+    """每个 user 登陆后都会有个对应的 token"""
     __tablename__ = 't_user_token'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False)
-    token_connection = Column(String, nullable=False)
-    expiration = Column(DateTime, nullable=False, default=datetime.now)
-    user = relationship('UserTable', backref=backref('user_tokens', cascade='all, delete-orphan')) #删除用户时，删除对应记录记录
+    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False, unique=True)
+    token = Column(String, nullable=False, unique=True)
+    expiration = Column(DateTime, nullable=False, default=datetime.now) #token 的有效期，创建时间距离当前时间超过2小时，即认为该用户已经掉线，下次需要重新登陆
 
-#目前只做单 chat，所以此条废弃
-#class UserChatID(Base):
-#    __tablename__ = 't_user_chatid'
-#    id = Column(Integer, primary_key=True, autoincrement=True)
-#    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False)
-#    chat_id = Column(String, nullable=False)
-#    user = relationship('User', backref=backref('user_chatids', cascade='all, delete-orphan'))
+class UserChatTable(Base):
+    """每个 chat 开启后都会有个对应的 chatid"""
+    __tablename__ = 't_user_chat'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False)
+    chat_id = Column(String, nullable=False)
+    chat_context = Column(String, default='')
 
 '''
 针对于表的操作 Opteration
@@ -102,7 +100,7 @@ class SqlOperator:
             't_user_token': {
                 'id' : 'value',
                 'user_id' : 'value',
-                'token_connection' : 'value',
+                'token' : 'value',
                 'expiration' : 'value'
             }
         }
@@ -115,10 +113,18 @@ class SqlOperator:
             try:
                 result = func(self, session, *args, **kwargs)
                 session.commit()
-                return result
+                
+                # 确保第三个返回值是一个列表，即使它本来就是一个列表
+                if isinstance(result[2], list):
+                    ret = result[2]
+                else:
+                    ret = [result[2]]
+                return result[0], result[1], ret
+
             except Exception as e:
                 session.rollback()
-                return {"errid": -1, "errmsg": str(e)}
+                logger.info(f"Exception Ocurred: {str(e)}")
+                return False, str(e), []
             finally:
                 session.close()
         return wrapper
@@ -127,8 +133,8 @@ class SqlOperator:
     @with_session_transaction
     def insert_one_row(self, session, table: Base):
         try:
-            ret = session.add(table)
-            return {"errid": 0, "errmsg": ' ', "datas": ret}
+            session.add(table)
+            return True, '操作成功', []
         except:
             raise
         
@@ -136,7 +142,7 @@ class SqlOperator:
     def delete_by_condition(self, session, table: Base, condition: dict):
         try:
             ret = session.query(table).filter_by(**condition).delete()
-            return {"errid": 0, "errmsg": ' ', "datas": ret}
+            return True, '操作成功', ret
         except:
             raise
 
@@ -144,7 +150,7 @@ class SqlOperator:
     def update_by_condition(self, session, table: Base, condition: dict, values: dict):
         try:
             ret = session.query(table).filter_by(**condition).update(values)
-            return {"errid": 0, "errmsg": ' ', "datas": ret}
+            return True, '操作成功', ret
         except:
             raise
 
@@ -155,7 +161,8 @@ class SqlOperator:
             table_name = table.__tablename__
             table = Table(table_name , Base.metadata, autoload=True)
             if table_name not in self.field_mapping:
-                return {"errid": -1, "errmsg": f"该表 { table_name } 没有对应的 field_mapping"}
+                logger.info(f"Error: 表 { table_name } 没有对应的 field_mapping")
+                return False, f" 表 { table_name } 没有对应的 field_mapping", []
             table_dict = self.field_mapping[table_name]
                 
             # 创建Query查询，filter是where条件，最后调用one()返回唯一行，如果调用all()则返回所有行:
@@ -170,7 +177,7 @@ class SqlOperator:
                         formatted_row_data[column.name] = getattr(row_data, column.name)
                 if formatted_row_data:
                     formatted_datas.append(formatted_row_data)
-            return {"errid": 0, "errmsg": ' ', "datas": formatted_datas}
+            return True, '操作成功', formatted_datas
         except:
             raise
 
@@ -180,7 +187,8 @@ class SqlOperator:
             #取出相应表的映射字典
             table_name = table.__name__
             if table_name not in self.field_mapping:
-                return {"errid": -1, "errmsg": f"该表 { table_name } 没有对应的 field_mapping"}
+                logger.info(f" 表 { table_name } 没有对应的 field_mapping")
+                return False, f"该表 { table_name } 没有对应的 field_mapping", []
             table_dict = self.field_mapping[table_name]
                 
             # 创建Query查询，filter是where条件，最后调用one()返回唯一行，如果调用all()则返回所有行:
@@ -196,7 +204,7 @@ class SqlOperator:
                         formatted_row_data[column.name] = getattr(row_data, column.name)
                 if formatted_row_data:
                     formatted_datas.append(formatted_row_data)
-            return {"errid": 0, "errmsg": ' ', "datas": formatted_datas}
+            return True, '操作成功', formatted_datas
         except:
             raise
     
@@ -208,44 +216,41 @@ if __name__ == '__main__':
     sql_operator = SqlOperator()
     #增
     user_obj = UserTable(username='test', password='1')
-    rst_insert = sql_operator.insert_one_row(user_obj)
-    print(f"新增数据, errid = {rst_insert['errid']}")
+    ok, msg, _ = sql_operator.insert_one_row(user_obj)
+    print(f"新增数据, ok = { ok }")
 
     #查
     print("查询数据:")
-    rst_query = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if rst_query["errid"] == 0:
-        datas = rst_query["datas"]
+    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
+    if ok == True:
         print(datas)
     else:
-        print("Error:", rst_query["errmsg"])
+        print("Error:", msg)
     
     #改 
     update_condition = {"username": 'test'}  # 更新 id 为 1 的记录
     update_values = {"email": "newemail@example.com", "phone": "1234567890"}
     # 调用 update_row 方法进行更新操作
-    rst_update = sql_operator.update_by_condition(UserTable, update_condition, update_values)
-    print( f"修改数据,  errid = {rst_update['errid']}, errmsg = {rst_update['errmsg']}" )
+    ok, msg, _ = sql_operator.update_by_condition(UserTable, update_condition, update_values)
+    print( f"修改数据,  ok = {ok}, errmsg = {msg}" )
 
     #查
-    rst_query = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if rst_query["errid"] == 0:
-        datas = rst_query["datas"]
+    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
+    if ok == True:
         print("查询数据:")
         print(datas)
     else:
-        print("查询数据， Error:", rst_query["errmsg"])
+        print("查询数据， Error:", msg )
 
     #删
-    rst_del = sql_operator.delete_by_condition(UserTable, {'username':'test', 'password':'1'})
-    print( f"删除数据,  errid = {rst_update['errid']}, errmsg = {rst_update['errmsg']}" )
+    ok, msg, _ = sql_operator.delete_by_condition(UserTable, {'username':'test', 'password':'1'})
+    print( f"删除数据,  errid = {ok}, errmsg = {msg}" )
  
     #查
-    rst_query = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if rst_query["errid"] == 0:
-        datas = rst_query["datas"]
+    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
+    if ok == True:
         print("查询数据:")
         print(datas)
     else:
-        print("查询数据, Error:", rst_query["errmsg"])
+        print("查询数据， Error:", msg )
  

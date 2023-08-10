@@ -1,0 +1,13 @@
+#[DATABASE]
+#URI = "sqlite://user:password@localhost/mydb"
+#MAX_CONNECTIONS = 10
+
+[SERVER] 
+HOST = "0.0.0.0" 
+PORT = 9527
+
+[CHAT] 
+#APIKEY = "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" 
+#APIKEY = "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" 
+#APIKEY = "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" 
+APIKEY = "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" 

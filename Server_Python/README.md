@@ -4,10 +4,15 @@
 # 功能列表
 + 预设 prompt 功能: 将自动发送提示词给 gpt，并将标签页设置为相应 prompt 的名
 
-# 版本迭代
+# 优化项
 + v1.0 请求-响应模式
 + v2.0 请求者-调用者模式
 
+# 一定要做
++ TODO: 每次登录，抛弃上下文
+    每次登录，都是一个新的对话框，将存储在服务器端的 上下文 清空
+    首次登录，将用户名与密码，加入 set
+    每次 chat，会将上下文加入容易，但是上下文最多为15条
 
 # 模块
 + Router模块(不用自己写)
@@ -17,12 +22,6 @@
 + 接口模块(定义 websocket event)
 + 业务逻辑层(距离业务逻辑处理) 
 
-# pip list
-pip install flask
-pip install flask-socketio
-pip install python-socketio
-pip install openai
-pip install toml
 
 # 我为什么写这个项目
 答: 为了熟悉 server 的模块设计，写出一个 完整的 server, 说到底，是为了锻炼我的架构能力
@@ -64,7 +63,6 @@ logout 接口响应示例：
 chat 接口请求示例：
 {
     "input" : "你好，GPT!"
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     "chat_session_id" : "xxxxxxxxxxxxxxxxxxxxx"
 }
 
@@ -113,7 +111,8 @@ chat 接口响应示例：
  + 接口设计
  + 消息结构设计
  + 表对象，可以写成员函数来抽象
- + json web token
+ + json web token 黑名单：确保xxx后，能被删除
+ + 多端登录、重复登录验证问题
 
 + controller， service，model 应该输出哪些关键日志？确保后续分析，哪些日志不用输出
  答：

@@ -14,19 +14,21 @@
 但是屏蔽了数据库差异，oracle、mysql、sqlite 等都能用
 """
 from sqlite3 import IntegrityError
-from tools import current_dir
+from tools import current_abs_path
 from logger import logger
 from sqlalchemy import Table, create_engine, Column, Integer, String, DateTime, ForeignKey
-from sqlalchemy.orm import relationship, backref, sessionmaker, declarative_base
+from sqlalchemy.orm import  sessionmaker, declarative_base
 from functools import wraps
 from datetime import datetime
 
+
 Base = declarative_base()
+db_dir = current_abs_path('../database')
 '''
  数据库创建相关 Setting
 '''
 # 初始化数据库连接:
-SQLiteURL = f'sqlite:///{current_dir()}/GptData.db'
+SQLiteURL = f'sqlite:///{ db_dir }/GptData.db'
 engine = create_engine(
     url=SQLiteURL,
     echo=False,
@@ -58,26 +60,23 @@ class UserTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     username = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
+    user_status = Column(Integer, default=0)  #
     email = Column(String, default='')
     phone = Column(String, default='')
     created_at = Column(DateTime, default=datetime.now)
     updated_at = Column(DateTime, default=datetime.now)
 
-class UserTokenTable(Base):
-    """每个 user 登陆后都会有个对应的 token"""
-    __tablename__ = 't_user_token'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False, unique=True)
-    token = Column(String, nullable=False, unique=True)
-    expiration = Column(DateTime, nullable=False, default=datetime.now) #token 的有效期，创建时间距离当前时间超过2小时，即认为该用户已经掉线，下次需要重新登陆
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password  
 
-class UserChatTable(Base):
-    """每个 chat 开启后都会有个对应的 chatid"""
-    __tablename__ = 't_user_chat'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False)
-    chat_id = Column(String, nullable=False)
-    chat_context = Column(String, default='')
+#class UserChatTable(Base):
+#    """每个 chat 开启后都会有个对应的 chatid"""
+#    __tablename__ = 't_user_chat'
+#    id = Column(Integer, primary_key=True, autoincrement=True)
+#    user_id = Column(Integer, ForeignKey('t_user.id', ondelete='CASCADE'), nullable=False)
+#    chat_id = Column(String, nullable=False)
+#    chat_context = Column(String, default='')
 
 '''
 针对于表的操作 Opteration
@@ -92,17 +91,12 @@ class SqlOperator:
                 'id' : 'value',
                 'username' : 'value',
                 'password' : 'value',
+                'user_status': 'value',
                 'email' : 'value',
                 'phone' : 'value',
                 'created_at' : 'value',
                 'updated_at' : 'value'
                 },
-            't_user_token': {
-                'id' : 'value',
-                'user_id' : 'value',
-                'token' : 'value',
-                'expiration' : 'value'
-            }
         }
     
     def with_session_transaction(func):
@@ -246,6 +240,11 @@ if __name__ == '__main__':
     ok, msg, _ = sql_operator.delete_by_condition(UserTable, {'username':'test', 'password':'1'})
     print( f"删除数据,  errid = {ok}, errmsg = {msg}" )
  
+    #增
+    user_obj = UserTable(username='test', password='1')
+    ok, msg, _ = sql_operator.insert_one_row(user_obj)
+    print(f"新增数据, ok = { ok }")
+
     #查
     ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
     if ok == True:

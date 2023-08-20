@@ -8,14 +8,14 @@ import sys
 from logger import logger
 import enum
 
-class SatusCode(enum.Enum):
-
-    Status_VALID_TOKEN = 1 #用户已登录
-
-    Status_Sql_FAILED = -1 #通用错误
-    Status_TOKEN_EXPIRED = -2 #用户未登录, token 已过期
-    Status_NO_TOKEN = -3 # 用户未登录, 且没有 token
-    Status_LOGIN_FAILED = -4 #用户未登录，其他原因导致的登录失败
+#class SatusCode(enum.Enum):
+#
+#    Status_VALID_TOKEN = 1 #用户已登录
+#
+#    Status_Sql_FAILED = -1 #通用错误
+#    Status_TOKEN_EXPIRED = -2 #用户未登录, token 已过期
+#    Status_NO_TOKEN = -3 # 用户未登录, 且没有 token
+#    Status_LOGIN_FAILED = -4 #用户未登录，其他原因导致的登录失败
 
 def current_dir() -> str:
     exec_file = os.path.basename(sys.argv[0])

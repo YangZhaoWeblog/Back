@@ -1,7 +1,5 @@
-
-import controller
-
+# main.py
+from app.router import run
 
 if __name__ == '__main__':
-    controller.run(config_path = './config.toml')
-
+    run()

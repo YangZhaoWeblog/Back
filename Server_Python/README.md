@@ -1,6 +1,12 @@
 # 项目简介
 > 供多人使用的 chatGpt 项目, server, client 跨平台
 
+# 我从这个项目学到了什么？
+> 为了熟悉 server 的模块设计，写出一个 完整的 server, 说到底，是为了锻炼我的架构能力
++ orm 模式-sqlite数据库
++ server 的分层 router, serive, model, tools 模块
++ pytest
+
 # 功能列表
 + 预设 prompt 功能: 将自动发送提示词给 gpt，并将标签页设置为相应 prompt 的名
 
@@ -20,13 +26,14 @@
 + Session 会话管理(每个 cookie 保存多久, 心跳包设计30s保活，超过30s认为已经失效)
 + Sql 调用模块(抽象 table 为 table 对象，通用增删改查)
 + 接口模块(定义 websocket event)
-+ 业务逻辑层(距离业务逻辑处理) 
-
-
-# 我为什么写这个项目
-答: 为了熟悉 server 的模块设计，写出一个 完整的 server, 说到底，是为了锻炼我的架构能力
-
-
++
+# pip list
+pip install flask
+pip install flask-socketio
+pip install python-socketio
+pip install openai
+pip install toml
+ 业务逻辑层(距离业务逻辑处理) 
 
 # 消息格式 json
 login 接口请求示例：
@@ -113,6 +120,8 @@ chat 接口响应示例：
  + 表对象，可以写成员函数来抽象
  + json web token 黑名单：确保xxx后，能被删除
  + 多端登录、重复登录验证问题
+ + 有人说，pytetst 过于繁琐，不如在文件里 if __main__ 来测试。
+    之前我也这么认为，直到使用了 pytest, 使我对于 Python 的包管理有了新的学习见解，以及学习了配置项目根目录的新方式
 
 + controller， service，model 应该输出哪些关键日志？确保后续分析，哪些日志不用输出
  答：

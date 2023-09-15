@@ -13,35 +13,22 @@
 感觉 orm 执行数据库操作，没有原生 sql 语句方便，顺畅。
 但是屏蔽了数据库差异，oracle、mysql、sqlite 等都能用
 """
-from sqlite3 import IntegrityError
-from tools import current_abs_path
-from logger import logger
+import sys
 from sqlalchemy import Table, create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import  sessionmaker, declarative_base
 from functools import wraps
 from datetime import datetime
+from .logger import logger
 
-
-Base = declarative_base()
-db_dir = current_abs_path('../database')
 '''
  数据库创建相关 Setting
 '''
-# 初始化数据库连接:
-SQLiteURL = f'sqlite:///{ db_dir }/GptData.db'
-engine = create_engine(
-    url=SQLiteURL,
-    echo=False,
-    connect_args={
-        'check_same_thread': False
-    }
-)
-
 # 创建对象的基类:
 Base = declarative_base()
 
 class SessionFactory:
-    def __init__(self):
+    def __init__(self, SQLiteURL):
+        engine = create_engine( url=SQLiteURL, echo=False, connect_args={ 'check_same_thread': False })
         Base.metadata.create_all(engine, checkfirst=True)# 创建了数据库表，其中 engine 参数为 SQLAlchemy 中的数据库引擎，checkfirst=True 表示只有当表不存在时才会创建。
         self.SessionMaker = sessionmaker( #使用 sessionmaker 创建一个 Session 工厂，该工厂会生成一个新的 Session 实例来与数据库进行交互。在创建 Session 时，使用 bind 参数将数据库引擎与 Session 绑定
             bind=engine,
@@ -66,9 +53,38 @@ class UserTable(Base):
     created_at = Column(DateTime, default=datetime.now)
     updated_at = Column(DateTime, default=datetime.now)
 
-    def __init__(self, username, password):
-        self.username = username
-        self.password = password  
+    @classmethod
+    def create_user(cls, session, username, password, email='', phone='', user_status=0):
+        new_user = cls(username=username, password=password, email=email, phone=phone, user_status=user_status)
+        session.add(new_user)
+        session.commit()
+
+    @classmethod
+    def get_user_by_id(cls, session, user_id):
+        return session.query(cls).filter_by(id=user_id).first()
+
+    @classmethod
+    def get_user_by_username(cls, session, username):
+        return session.query(cls).filter_by(username=username).first()
+   
+    @classmethod
+    def get_all_users(cls, session):
+        return session.query(cls).all()
+
+    @classmethod
+    def update_user(cls, session, user_id, new_data):
+        user = session.query(cls).filter_by(id=user_id).first()
+        if user:
+            for key, value in new_data.items():
+                setattr(user, key, value)
+            session.commit()
+
+    @classmethod
+    def delete_user(cls, session, user_id):
+        user = session.query(cls).filter_by(id=user_id).first()
+        if user:
+            session.delete(user)
+            session.commit()
 
 #class UserChatTable(Base):
 #    """每个 chat 开启后都会有个对应的 chatid"""
@@ -79,12 +95,13 @@ class UserTable(Base):
 #    chat_context = Column(String, default='')
 
 '''
-针对于表的操作 Opteration
+更通用的针对于表的操作 Opteration
 '''
 class SqlOperator:
-    def __init__(self):
+    def __init__(self, SQLiteURL):
         # 创建会话session, 每次增删改查操作都需要使用 session
-        self.session_factory = SessionFactory()
+        self.session_factory = SessionFactory(SQLiteURL)
+
         #用于 query 出结果后，返回整个字典
         self.field_mapping = {
             't_user' : {
@@ -205,51 +222,5 @@ class SqlOperator:
     #具体型：针对于特定表的操作
     pass
 
-if __name__ == '__main__':
 
-    sql_operator = SqlOperator()
-    #增
-    user_obj = UserTable(username='test', password='1')
-    ok, msg, _ = sql_operator.insert_one_row(user_obj)
-    print(f"新增数据, ok = { ok }")
 
-    #查
-    print("查询数据:")
-    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if ok == True:
-        print(datas)
-    else:
-        print("Error:", msg)
-    
-    #改 
-    update_condition = {"username": 'test'}  # 更新 id 为 1 的记录
-    update_values = {"email": "newemail@example.com", "phone": "1234567890"}
-    # 调用 update_row 方法进行更新操作
-    ok, msg, _ = sql_operator.update_by_condition(UserTable, update_condition, update_values)
-    print( f"修改数据,  ok = {ok}, errmsg = {msg}" )
-
-    #查
-    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if ok == True:
-        print("查询数据:")
-        print(datas)
-    else:
-        print("查询数据， Error:", msg )
-
-    #删
-    ok, msg, _ = sql_operator.delete_by_condition(UserTable, {'username':'test', 'password':'1'})
-    print( f"删除数据,  errid = {ok}, errmsg = {msg}" )
- 
-    #增
-    user_obj = UserTable(username='test', password='1')
-    ok, msg, _ = sql_operator.insert_one_row(user_obj)
-    print(f"新增数据, ok = { ok }")
-
-    #查
-    ok, msg, datas = sql_operator.query_condition_fetch_all(UserTable, {'username':'test', 'password':'1'})
-    if ok == True:
-        print("查询数据:")
-        print(datas)
-    else:
-        print("查询数据， Error:", msg )
- 

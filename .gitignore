@@ -1,8 +1,17 @@
-
 # 忽略的文件
 Server_Python/config/config.toml 
 
 # 忽略的目录
 Server_Python/database/GptData.db
 
-
+*.spec
+*.xml
+*.iml
+*.log
+*.xls
+*.xlsx
+*.dll
+*.pyc
+*.log
+dist
+build
